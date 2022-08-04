@@ -3,16 +3,16 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  console.log (req.body);
+  process.stdout.write (JSON.stringify(req.body) + '\n');
   console.log ("==========================");
-  console.log (req.headers);
+  process.stdout.write (JSON.stringify(req.headers) + '\n');
   res.send ("Success");
 });
 
 router.post('/', function(req, res, next) {
-  console.log (req.body);
+  process.stdout.write (JSON.stringify(req.body) + '\n');
   console.log ("==========================");
-  console.log (req.headers);
+  process.stdout.write (JSON.stringify(req.headers) + '\n');
   res.send ("Success");
 });
 
