@@ -6,4 +6,15 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+/* POST search users listing. */
+router.post('/', function(req, res, next) {
+  console.log ("========== Starting Request Write ==========");
+  process.stdout.write (JSON.stringify(req.headers) + '\n');
+  process.stdout.write (JSON.stringify(req.body) + '\n');
+  console.log ("========== Ending Request Write ==========");
+
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify({"foundSignupDate":"2022-08-17", "userId":"123456789"}));
+});
+
 module.exports = router;
